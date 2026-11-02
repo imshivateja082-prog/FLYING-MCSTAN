@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Flappy MC Stan – Night Concert Edition</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎤</text></svg>" />
+  <meta name="description" content="Play Flappy MC Stan – an epic night concert edition of Flappy Bird featuring MC Stan as the playable character flying through giant microphone obstacles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-wrapper">
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- START SCREEN -->
+    <div id="start-screen" class="screen">
+      <div class="screen-bg-overlay"></div>
+      <div class="spotlights">
+        <div class="spotlight sl1"></div>
+        <div class="spotlight sl2"></div>
+        <div class="spotlight sl3"></div>
+        <div class="spotlight sl4"></div>
+      </div>
+      <div class="laser-container">
+        <div class="laser l1"></div>
+        <div class="laser l2"></div>
+        <div class="laser l3"></div>
+        <div class="laser l4"></div>
+      </div>
+      <div class="start-content">
+        <div class="title-block">
+          <h1 id="main-title">FLAPPY MC STAN</h1>
+          <p class="subtitle">NIGHT CONCERT EDITION</p>
+        </div>
+        <div class="character-showcase">
+          <div class="char-glow-ring"></div>
+          <img id="start-char-img" src="assets/mc-stan-character.png" alt="MC Stan" />
+        </div>
+        <div class="high-score-display" id="start-highscore">
+          <span class="hs-label">BEST HYPE</span>
+          <span class="hs-value" id="start-hs-value">0</span>
+        </div>
+        <button id="play-btn" class="glow-btn" onclick="startGame()">
+          <span class="btn-icon">▶</span>
+          <span>PLAY</span>
+        </button>
+        <p class="hint-text">SPACE / TAP to fly</p>
+      </div>
+      <div class="crowd-silhouette"></div>
+    </div>
+
+    <!-- GAME OVER SCREEN -->
+    <div id="gameover-screen" class="screen hidden">
+      <div class="screen-bg-overlay go-overlay"></div>
+      <div class="spotlights">
+        <div class="spotlight sl1"></div>
+        <div class="spotlight sl2"></div>
+      </div>
+      <div class="gameover-content">
+        <h2 id="gameover-title">GAME OVER</h2>
+        <div class="score-panel">
+          <div class="score-row">
+            <span class="score-label">HYPE</span>
+            <span class="score-val" id="go-score">0</span>
+          </div>
+          <div class="divider-line"></div>
+          <div class="score-row">
+            <span class="score-label">BEST</span>
+            <span class="score-val highlight" id="go-highscore">0</span>
+          </div>
+        </div>
+        <button id="restart-btn" class="glow-btn restart" onclick="restartGame()">
+          <span class="btn-icon">↺</span>
+          <span>PLAY AGAIN</span>
+        </button>
+      </div>
+      <div class="crowd-silhouette"></div>
+    </div>
+
+    <!-- HUD (during gameplay) -->
+    <div id="hud" class="hidden">
+      <div id="score-display">
+        <span class="hud-label">HYPE</span>
+        <span id="current-score">0</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

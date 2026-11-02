@@ -1,0 +1,34 @@
+{
+  "name": "flying-mcstan",
+  "version": "1.0.0",
+  "description": "Flappy MC Stan – Night Concert Edition. A Flappy Bird-style browser game featuring MC Stan as the playable character flying through giant microphone obstacles in a nighttime concert stadium.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3333 --cors -o",
+    "dev": "npx http-server . -p 3333 --cors -o",
+    "serve": "npx http-server . -p 8080 --cors -o"
+  },
+  "keywords": [
+    "flappy-bird",
+    "mc-stan",
+    "game",
+    "concert",
+    "browser-game",
+    "html5-game",
+    "canvas",
+    "javascript"
+  ],
+  "author": "imshivateja082-prog",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imshivateja082-prog/FLYING-MCSTAN.git"
+  },
+  "homepage": "https://imshivateja082-prog.github.io/FLYING-MCSTAN",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
